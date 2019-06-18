@@ -24,4 +24,34 @@
     ];
 
     // your code here
+
+    let go = document.getElementById("run");
+
+
+
+    go.addEventListener("click", function () {
+
+        let fruits = [
+            "pomme",
+            "poire",
+            "fraise",
+            "tomate",
+            "orange",
+            "mandarine",
+            "durian",
+            "pêche",
+            "raisin",
+            "cerise",
+        ];
+
+        console.log(fruits);
+
+        fruits.shift("pomme");
+        fruits.pop("cerise");
+        fruits.unshift("banane");
+        fruits.push("kiwi");
+
+        console.log(fruits);
+
+    })
 })();

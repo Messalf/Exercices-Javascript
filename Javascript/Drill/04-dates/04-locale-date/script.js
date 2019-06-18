@@ -10,6 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
+        let today = new Date();
+        
+        let infos = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+            
+        let heure = today.getHours() + "h" + today.getMinutes();
+    document.getElementById("target").innerHTML = ((today.toLocaleString("fr-FR", infos))+" "+ heure);
+    
+    
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
-})();
+})()

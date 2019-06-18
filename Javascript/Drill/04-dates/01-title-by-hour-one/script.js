@@ -10,6 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
+    let docu = document.querySelector("target")
+
+    function status() {
+        let date = new Date();
+        let heure = date.getHours();
+        let minutes = date.getMinutes();
+        if (heure < 18) {
+            target.innerHTML = ("Bonjour");
+        } else {
+            target.innerHTML = ("Bonsoir");
+        }
+    }
+
+    status()
+
+
+
+
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
 })();

@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    (() => {
+    
+        document.getElementById('run').addEventListener('click', () => {
+            let color ='#'+ (Math.random()*0xFFFFFF<<0).toString(16);
+            document.body.style.backgroundColor = color
+        })
+        })();
+        // référence couleur en Html : #fd47g5 par exemple
+        //La méthode toString() renvoie une chaîne de caractères représentant l'objet.
 })();
