@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        let passone = document.getElementById('pass-one');
+        let passtwo = document.getElementById('pass-two');
+        if(passone.value === passtwo.value) {
+            alert("C'est bon");
+        }   else {
+                passone.style.border = '2px solid red';
+                passtwo.style.border = '2px solid red';
+            }
+        
+    })
+
 })();

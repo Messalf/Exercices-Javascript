@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+    let target = document.getElementById('target');
+    let Table = document.createElement('table');
+    target.appendChild(Table);
+    let tableau = document.getElementsByTagName('table')[0];
+    let row = 10;
+    let col = 10;
+
+    function multiply() {
+        for (i=1; i<=row;i++) {
+            let Tr = document.createElement('tr'); // pour créer les tr
+            tableau.appendChild(Tr);
+          
+                for (j = 1; j<=col;j++) { 
+                    let Td = document.createElement('td'); // pour créer les tf
+                   
+                    Td.innerHTML = i * j // pour multiplier les numéros de colonnes entre eux
+                    Tr.appendChild(Td); // reprend les valeurs de Td pour les appliquer aux autres
+                }
+        }
+    }
+    multiply();
 })();

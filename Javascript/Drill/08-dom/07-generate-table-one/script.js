@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    let tableau = document.getElementById('target')
+    let newtable = document.createElement('table'); // cela crée une balise de tableau
+
+    for (i = 0; i < 10; i++) {
+        let row = newtable.insertRow(0).insertCell(0); // cela va insérer des row et des cellules à l'intérieur du nouveau tableau créer
+    }
+
+    tableau.appendChild(newtable); // le nouveau tableau va se déplacer dans target
+
+    console.log(tableau);
 })();

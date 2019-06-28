@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('pass-one').addEventListener('input', () => {
+        let valeur = document.querySelector('input'); // pour récupérer la valeur de la balise input
+        valeur.setAttribute('maxlength', "10"); // set les max caractères
+        let caracteres = document.querySelector('#pass-one').value; // chercher la valeur
+        let longueur = caracteres.length; // renvoi le nombre de caractère dans l'id
+        let counter = document.getElementById('counter');
+        counter.innerText = caracteres.length+"/10"; // incrémenter le compteur
+    })
 })();

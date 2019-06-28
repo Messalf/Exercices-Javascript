@@ -10,5 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('pass-one').addEventListener ('input', () => {
+        let valeur = document.getElementById('pass-one').value // pour retourner la valeur du mdp
+        let longval = valeur.length;
+        let val = document.getElementById('validity'); // retourne la valeur du champ de l'id
+
+        if (valeur.length <= 8) {
+            let nombre = 0;
+            for (i=0;i<longval;i++) {
+                if (!isNaN(valeur[i])) { // valeur nombre
+                    nombre++
+                }
+            }
+                if (nombre>=2) {
+                    if(valeur.length>=8) {
+                        val.innerText='Ok';
+                    }
+                }
+    }
+    })
 })();

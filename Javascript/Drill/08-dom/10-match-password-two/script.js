@@ -11,4 +11,11 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        let passone = document.getElementById('pass-one');
+        let passtwo = document.getElementById('pass-two');
+        if (passone.value !== passtwo.value) {
+            let a = document.querySelectorAll('input')[0].classList.add('error');
+            let b = document.querySelectorAll('input')[1].classList.add('error');
+    }})
 })();

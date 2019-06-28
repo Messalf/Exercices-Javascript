@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    let balise = document.querySelector('img');
+    let out = balise.getAttribute('src');
+    let over = balise.getAttribute('data-hover');
+
+    balise.addEventListener('mouseover', () => {
+        balise.src = over;
+    })
+    balise.addEventListener('mouseout', () => {
+        balise.src = out;
+    })
 })();
