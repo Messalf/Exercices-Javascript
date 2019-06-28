@@ -26,4 +26,12 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        if (fruits.includes('pomme')) { // définition includes : La méthode includes() détermine si une chaîne de caractères est contenue dans une autre et renvoie true ou false selon le cas de figure.
+            console.log('Oui');
+        }
+        else {
+            console.log('Non');
+        }
+    })
 })();

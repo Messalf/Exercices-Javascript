@@ -25,11 +25,8 @@
 
     // your code here
 
-    let go = document.getElementById("run");
-
-
-
-    go.addEventListener("click", function () {
+    
+    document.getElementById("run").addEventListener("click", () => {
 
         let fruits = [
             "pomme",

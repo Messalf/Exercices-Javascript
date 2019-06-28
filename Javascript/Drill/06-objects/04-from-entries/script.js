@@ -10,7 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    const keys = ["name", "species", "age", "gender", "color"];
-    const values = ["Skitty", "cat", 9, "female", "tabby"];
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {
+
+
+        const keys = ["name", "species", "age", "gender", "color"];
+        const values = ["Skitty", "cat", 9, "female", "tabby"];
+        // your code here
+        const objet = new Map([
+            ["name", "Skitty"],
+            ["species", "cat"],
+            ["age", 9],
+            ["gender", "female"],
+            ["color", "tabby"]
+        ])
+        console.log(Object.fromEntries(objet));
+    })
 })();

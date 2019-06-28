@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    class Person {
+        constructor(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+        get name() {
+            return this.firstname + " " + this.lastname;
+        }
+        set name(name) {
+            name = name.split(` `);
+            this.firstname = name[0];
+            this.lastname = name[1];
+        }
+    }
+
+    document.getElementById('run').addEventListener('click', () => {
+        let person1 = new Person ('Jean', 'Dupuis');
+        console.log(person1.name);
+        person1.name = 'Bernard Boulette';
+        console.log(person1.name);
+    })
 })();

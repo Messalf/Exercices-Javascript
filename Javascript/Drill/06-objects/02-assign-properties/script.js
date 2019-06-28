@@ -27,4 +27,10 @@
         user: null,
     };
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        for(i=0;i<9;i++) {
+            computers[i] = Object.assign({},defaultProps,computers[i]);
+        }
+        console.log(computers);
+    })
 })();

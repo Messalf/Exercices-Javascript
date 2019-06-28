@@ -26,9 +26,9 @@
     ];
 
     // your code here
-    let affichfruit = document.getElementById('run');
+    
 
-    affichfruit.addEventListener('click', () => {
+    document.getElementById('run').addEventListener('click', () => {
         for (let i = 0; i<fruits.length;i++) {
             console.log(fruits[i]);
         }

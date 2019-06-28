@@ -89,4 +89,14 @@
     ];
 
     // your code here
+document.getElementById('run').addEventListener('click', () => {
+
+
+
+    const age = people.map(function(e) { // définition de .map() :  La méthode map() crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
+        if (e.age > 18) {
+            console.log(e);
+        }
+    })
+})
 })();

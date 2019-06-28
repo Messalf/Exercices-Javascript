@@ -28,4 +28,9 @@
     ];
 
     // your code here
+document.getElementById('run').addEventListener('click', () => {
+        const fruits2 = [...new Set(fruits)]; // L'objet Set (Ensemble en français) permet de stocker des valeurs uniques, de n'importe quel type, que ce soit des valeurs d'un type primitif ou des objets.
+        console.log(fruits2);
+})
+
 })();

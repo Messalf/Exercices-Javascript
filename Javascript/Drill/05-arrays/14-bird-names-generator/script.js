@@ -38,5 +38,16 @@
         "arboré",
     ]);
 
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {   
+        let nouvotablo = Array.from(adjectives);
+        let randompiaf = birds[Math.floor(Math.random()*birds.length)];
+        let randomadj = nouvotablo[Math.floor(Math.random()*nouvotablo.length)];
+        
+
+        if (randompiaf.fem == true) {
+            document.getElementById('target').innerHTML = (randompiaf.name+" "+ randomadj + "e");
+        } else {
+            document.getElementById('target').innerHTML = (randompiaf.name+" "+randomadj);
+        }
+    })
 })();
