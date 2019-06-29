@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
     let target = document.getElementById('target');
     let Table = document.createElement('table');
     target.appendChild(Table);

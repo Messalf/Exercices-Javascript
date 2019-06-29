@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        window.lib.getPosts().then((table) => { // pas d'error ici car c'est une promise
+        table.forEach(e => {
+            window.lib.getComments(e.id).then((comments) => {
+                e['comments'] = comments;
+            })
+        })
+        console.log(table);
+        })
+    })
 })();

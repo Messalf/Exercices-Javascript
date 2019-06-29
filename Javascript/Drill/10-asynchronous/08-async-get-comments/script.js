@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        async function commentCall() {
+            await window.lib.getPosts().then((table)=> {
+                table.forEach(e => {
+                    window.lib.getComments(e.id).then((comments) => {
+                        e['comments'] = comments;
+                    })
+                })
+                console.log(table);
+            })
+        }
+        commentCall();
+    })
 })();

@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        window.lib.getPosts ((error, table) => {
+            console.log(table);
+            table.forEach(e => { // boucle pour selectionner chacun des éléments du tableau
+                window.lib.getComments(e.id,(error, comments) => { // création de la propriété comments grâce à getComments() pour chaque élément du tableau 
+                    e['comments'] = comments;
+                })
+            })
+        })
+    })
 })();

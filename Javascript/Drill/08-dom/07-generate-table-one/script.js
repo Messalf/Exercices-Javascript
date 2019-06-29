@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
     let tableau = document.getElementById('target')
     let newtable = document.createElement('table'); // cela crée une balise de tableau
 

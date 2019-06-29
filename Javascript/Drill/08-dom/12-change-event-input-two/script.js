@@ -13,7 +13,7 @@
     document.getElementById('pass-one').addEventListener ('input', () => {
         let valeur = document.getElementById('pass-one').value // pour retourner la valeur du mdp
         let longval = valeur.length;
-        let val = document.getElementById('validity'); // retourne la valeur du champ de l'id
+        let val = document.getElementById('validity'); // retourn la valeur du champ de l'id
 
         if (valeur.length <= 8) {
             let nombre = 0;

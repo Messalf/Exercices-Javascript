@@ -10,5 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        window.lib.getPosts((error, table) => { // 2 paramètres, une erreur et un tableau. le getPosts() est similaire à addEventListener()
+            console.log(table); // le tableau existe déjà dans le window.lib, et on l'appelle via le getPosts(),
+        })
+    })
 })();

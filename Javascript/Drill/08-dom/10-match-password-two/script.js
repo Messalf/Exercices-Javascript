@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  
     document.getElementById('run').addEventListener('click', () => {
         let passone = document.getElementById('pass-one');
         let passtwo = document.getElementById('pass-two');
