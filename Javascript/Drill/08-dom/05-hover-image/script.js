@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
     let balise = document.querySelector('img');
     let out = balise.getAttribute('src');
     let over = balise.getAttribute('data-hover');

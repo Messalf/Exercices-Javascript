@@ -13,5 +13,5 @@
     document.querySelectorAll('.target').innerHTML = "owned"
     for (i=0;i<document.querySelectorAll('p.target').length; i++) {
         document.querySelectorAll('.target')[i].innerHTML = "owned"
-    } // querySelectorAll = tableau = boucles
+    } // querySelectorAll = tableau = boucles !
 })();
