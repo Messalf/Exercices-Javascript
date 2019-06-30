@@ -15,21 +15,21 @@
         let longval = valeur.length;
         let val = document.getElementById('validity'); // retourne la valeur du champ de l'id
 
-        if (longval <= 8) {
+        if (longval >= 8) {
             let nombre = 0;
             for (i=0;i<longval;i++) {
                 if (!isNaN(valeur[i])) { // valeur nombre
                     nombre++
                 }
             }
-                if (nombre>=2) {
-                    if(longval>=8) {
+                if (nombre>=2 && longval>=8) {
                         val.innerText='Ok';
-                    }
+                    } else {
+                        val.innerText='Pas ok'
+                    } 
+                }  else {
+                    val.innerText='Pas ok' 
                 }
-    }
-    })
+})
 })();
-// le code fonctionne mais si on tape plus de 8 lettres et qu'ensuite 
-// on tape des chiffres et bien la validity ne se transforme pas en "Ok".
-// et la validity ne réagit pas en temps réel, je n'ai pas encore trouvé la solution.
+// le code fonctionnait mais était buggé, mais avec l'aide de Thomas il fonctionne parfaitement.
