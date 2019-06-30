@@ -10,5 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('slider').addEventListener('input',(event) => {
+        document.getElementById('target').innerHTML = `+ ${event.currentTarget.value}`; // currentTarget est la valeur du slider
+    })
 })();
+// code fait à la journée de consolidation le 27/06.

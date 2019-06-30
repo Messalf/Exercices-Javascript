@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let txt = document.getElementById('target');
+    let nouveau = txt.innerText; // mettre le texte dans une nouvelle variable et en placer le contenu dans l'id et donc éviter un conflit = txt dans txt
+    let i = 0;
+    let speed = 90;
+    txt.innerHTML = "";
+
+    function typeWriter() {
+        if(i<nouveau.length){
+            txt.innerHTML += nouveau.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    typeWriter();
 })();
+
+// code fait à la journée de consolidation le 27/06.

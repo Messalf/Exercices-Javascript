@@ -13,9 +13,9 @@
     document.getElementById('pass-one').addEventListener ('input', () => {
         let valeur = document.getElementById('pass-one').value // pour retourner la valeur du mdp
         let longval = valeur.length;
-        let val = document.getElementById('validity'); // retourn la valeur du champ de l'id
+        let val = document.getElementById('validity'); // retourne la valeur du champ de l'id
 
-        if (valeur.length <= 8) {
+        if (longval <= 8) {
             let nombre = 0;
             for (i=0;i<longval;i++) {
                 if (!isNaN(valeur[i])) { // valeur nombre
@@ -23,10 +23,13 @@
                 }
             }
                 if (nombre>=2) {
-                    if(valeur.length>=8) {
+                    if(longval>=8) {
                         val.innerText='Ok';
                     }
                 }
     }
     })
 })();
+// le code fonctionne mais si on tape plus de 8 lettres et qu'ensuite 
+// on tape des chiffres et bien la validity ne se transforme pas en "Ok".
+// et la validity ne réagit pas en temps réel, je n'ai pas encore trouvé la solution.
